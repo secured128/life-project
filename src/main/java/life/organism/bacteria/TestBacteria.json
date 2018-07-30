@@ -1,0 +1,30 @@
+{
+  "class_name" : "life.organism.bacteria.TestBacteria",
+  "name" : "test bacteria name",
+  "dna_length" : 368,
+  "genes" : [ {
+    "id" : "5000",
+    "name" : "GXP_5555555",
+    "description" : "taxid=47457|spec=Homo sapiens|chr=15|ctg=NC_0346011|str=(--+)",
+    "start_position" : 3,
+    "length" : 30
+  }, {
+    "id" : "5080",
+    "name" : "GXP_4405072",
+    "description" : "taxid=9606|spec=Homo sapiens|chr=11|ctg=NC_000011|str=(-)",
+    "start_position" : 35,
+    "length" : 13
+  }, {
+    "id" : "5190",
+    "name" : "GXP_67895846",
+    "description" : "taxid=947933|spec=Homo sapiens|chr=24|ctg=NC_06346011|str=(+)",
+    "start_position" : 115,
+    "length" : 51
+  }, {
+    "id" : "6000",
+    "name" : "GXP_6000000",
+    "description" : "taxid=60000|spec=Homo sapiens|chr=60|ctg=NC_6000000|str=(+-+-)",
+    "start_position" : 300,
+    "length" : 66
+  } ]
+}

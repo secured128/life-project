@@ -1,0 +1,20 @@
+package life.core.model;
+
+public enum SIDE_CHAIN_CLASS {
+
+	ACID,
+	CYCLIC,
+	AMIDE,
+	SULFUR_CONTAINING,
+	ALIPHATIC,
+	AROMATIC,
+	BASIC_AROMATIC,
+	HYDROXYL_CONTAINING,
+	BASIC;
+
+
+	SIDE_CHAIN_CLASS (){
+	}
+
+
+}
