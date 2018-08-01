@@ -7,8 +7,8 @@ MAINTAINER Alex
 # Add a volume pointing to /tmp
 VOLUME /tmp
 
-# Make port 8080 available to the world outside this container
-EXPOSE 8080
+# Make port 8090 available to the world outside this container
+EXPOSE 8090
 
 # The application's jar file
 ARG JAR_FILE=build/libs/life-project-0.0.1-SNAPSHOT.jar
@@ -22,4 +22,4 @@ ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/life-proje
 CMD ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/life-project.jar"]
 
 
-#docker run -p 8080:8080 life-project/life-project:latest
+#docker run -p 8090:8090 life-project/life-project:latest
