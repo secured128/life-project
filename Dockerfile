@@ -23,3 +23,10 @@ CMD ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/life-project.jar"
 
 
 #docker run -p 8090:8090 life-project/life-project:latest
+
+
+#  heroku login
+#  heroku container:login
+#  heroku container:push web -a life-project
+#  heroku container:release web -a life-project
+#  heroku open -a life-project
