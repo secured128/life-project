@@ -7,8 +7,8 @@ MAINTAINER Alex
 # Add a volume pointing to /tmp
 VOLUME /tmp
 
-# Make port 8090 available to the world outside this container
-EXPOSE 8090
+# Make port 8080 available to the world outside this container
+EXPOSE 8080
 
 # The application's jar file
 ARG JAR_FILE=build/libs/life-project-0.0.1-SNAPSHOT.jar
@@ -17,12 +17,12 @@ ARG JAR_FILE=build/libs/life-project-0.0.1-SNAPSHOT.jar
 ADD ${JAR_FILE} life-project.jar
 
 # Run the jar file 
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/life-project.jar"]
+ENTRYPOINT ["java","-XX:+UnlockExperimentalVMOptions","-XX:+UseCGroupMemoryLimitForHeap","-Djava.security.egd=file:/dev/./urandom","-Dspring.server.port=$PORT","-jar","/life-project.jar","--server.port=$PORT"]
 
-CMD ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/life-project.jar"]
+CMD ["java","-XX:+UnlockExperimentalVMOptions","-XX:+UseCGroupMemoryLimitForHeap","-Djava.security.egd=file:/dev/./urandom","-Dspring.server.port=$PORT","-jar","/life-project.jar","--server.port=$PORT"]
 
 
-#docker run -p 8090:8090 life-project/life-project:latest
+#docker run -p 8080:8080 life-project/life-project:latest
 
 
 #  heroku login
