@@ -1,1 +1,1 @@
-web: java -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -Djava.security.egd=file:/dev/./urandom -Dspring.server.port=$PORT -jar /life-project.jar --server.port=$PORT $JAR_OPTS
+web: java -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -Djava.security.egd=file:/dev/./urandom -Dspring.server.port=$PORT -jar /life-project.jar
