@@ -17,16 +17,16 @@ ARG JAR_FILE=build/libs/life-project-0.0.1-SNAPSHOT.jar
 ADD ${JAR_FILE} life-project.jar
 
 # Run the jar file 
-ENTRYPOINT ["java","-XX:+UnlockExperimentalVMOptions","-XX:+UseCGroupMemoryLimitForHeap","-Djava.security.egd=file:/dev/./urandom","-Dspring.server.port=$PORT","-jar","/life-project.jar","--server.port=$PORT"]
+#ENTRYPOINT ["java","-XX:+UnlockExperimentalVMOptions","-XX:+UseCGroupMemoryLimitForHeap","-Djava.security.egd=file:/dev/./urandom","-Dspring.server.port=$PORT","-jar","/life-project.jar"]
 
-CMD ["java","-XX:+UnlockExperimentalVMOptions","-XX:+UseCGroupMemoryLimitForHeap","-Djava.security.egd=file:/dev/./urandom","-Dspring.server.port=$PORT","-jar","/life-project.jar","--server.port=$PORT"]
+CMD ["java","-XX:+UnlockExperimentalVMOptions","-XX:+UseCGroupMemoryLimitForHeap","-Djava.security.egd=file:/dev/./urandom","-jar","/life-project.jar"]
 
 
 #docker run -p 8080:8080 life-project/life-project:latest
 
 
 #  heroku login
-#  heroku container:login
+#  heroku container:login (1Qazxsw@-!)
 #  heroku container:push web -a life-project
 #  heroku container:release web -a life-project
 #  heroku open -a life-project
