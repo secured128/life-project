@@ -62,4 +62,13 @@ public class WebApiController {
         return result;
     }
 
+    @GetMapping("/aminoacids")
+    @ResponseBody
+    public String aminoacids() {
+        try {
+            return objectMapper.writeValueAsString(AMINO_ACID.values());
+        } catch (Exception e) {
+            return "{\"error\",\"" + e.getMessage() + "\"}";
+        }
+    }
 }
