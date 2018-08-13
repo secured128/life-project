@@ -1,4 +1,4 @@
-package life.core;
+package org.life.core;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Assert;

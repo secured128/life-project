@@ -1,14 +1,14 @@
-package life.core;
+package org.life.core;
 
-import org.junit.Assert;
-import org.junit.Test;
-import org.junit.runner.RunWith;
 import life.CoreApplication;
 import life.core.model.Protein;
 import life.core.model.RnaSequence;
 import life.organism.Gene;
 import life.organism.OrganismUtil;
 import life.organism.bacteria.TestBacteria;
+import org.junit.Assert;
+import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
