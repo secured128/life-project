@@ -19,7 +19,7 @@ ADD ${JAR_FILE} life-project.jar
 # Run the jar file 
 #ENTRYPOINT ["java","-XX:+UnlockExperimentalVMOptions","-XX:+UseCGroupMemoryLimitForHeap","-Djava.security.egd=file:/dev/./urandom","-Dspring.server.port=$PORT","-jar","/life-project.jar"]
 
-CMD ["java","-XX:+UnlockExperimentalVMOptions","-XX:+UseCGroupMemoryLimitForHeap","-Djava.security.egd=file:/dev/./urandom","-jar","/life-project.jar"]
+CMD ["java","-jar","-XX:+UnlockExperimentalVMOptions","-XX:+UseCGroupMemoryLimitForHeap","-Djava.security.egd=file:/dev/./urandom","-Dspring.profiles.active=prod","/life-project.jar"]
 
 
 #docker run -p 8080:8080 life-project/life-project:latest
