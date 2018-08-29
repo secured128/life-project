@@ -1,0 +1,21 @@
+---
+logging:
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} %magenta([%thread]) %highlight(%-5level) %logger.%M - %msg%n"
+  level:
+    org:
+      springframework: INFO
+management:
+  server:
+    address: 127.0.0.1
+---
+spring:
+  profiles: dev
+web:
+  url: http://localhost:8080/health
+---
+spring:
+  profiles: prod
+web:
+  url: https://life-project.herokuapp.com/health
+---

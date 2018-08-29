@@ -22,11 +22,12 @@ ADD ${JAR_FILE} life-project.jar
 CMD ["java","-jar","-XX:+UnlockExperimentalVMOptions","-XX:+UseCGroupMemoryLimitForHeap","-Djava.security.egd=file:/dev/./urandom","-Dspring.profiles.active=prod","/life-project.jar"]
 
 
-#docker run -p 8080:8080 life-project/life-project:latest
-
 
 #  heroku login
 #  heroku container:login (1Qazxsw@-!)
 #  heroku container:push web -a life-project
 #  heroku container:release web -a life-project
 #  heroku open -a life-project
+
+#local run
+#docker run -p 8080:8080 life-project/life-project:latest

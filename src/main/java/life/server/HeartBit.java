@@ -80,7 +80,7 @@ public class HeartBit extends Thread implements Serializable {
         BufferedReader in = null;
         String inputLine;
         StringBuffer content;
-
+        System.out.println(HeartBit.class.getName() + " initialized with heart-bit.rate : " + bitRate);
         while (true) {
             try {
                 Thread.sleep(bitRate);
