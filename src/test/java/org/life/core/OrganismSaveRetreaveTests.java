@@ -1,23 +1,15 @@
 package org.life.core;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.junit.Assert;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import life.CoreApplication;
 import life.organism.OrganismUtil;
 import life.organism.bacteria.TestBacteria;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.junit.Assert;
+import org.junit.Test;
 
 import java.io.File;
 
-/**
- * Created by amnona on 6/22/2017.
- */
-@RunWith(SpringRunner.class)
-@SpringBootTest(classes = {CoreApplication.class}, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class OrganismSaveRetreaveTests {
+
+public class OrganismSaveRetreaveTests extends AbstractTest {
 
     private static final File srcDnaTextFile = new File(OrganismSaveRetreaveTests.class.getClassLoader().getResource("TestOrganismTemplateDnaStrand.txt").getFile());
     private static final File srcJsonFile = new File(OrganismSaveRetreaveTests.class.getClassLoader().getResource("TestOrganism.json").getFile());

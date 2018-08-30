@@ -1,6 +1,5 @@
 package org.life.core;
 
-import life.CoreApplication;
 import life.core.model.Protein;
 import life.core.model.RnaSequence;
 import life.organism.Gene;
@@ -8,18 +7,11 @@ import life.organism.OrganismUtil;
 import life.organism.bacteria.TestBacteria;
 import org.junit.Assert;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
 
 import java.io.File;
 
-/**
- * Created by amnona on 6/22/2017.
- */
-@RunWith(SpringRunner.class)
-@SpringBootTest(classes = {CoreApplication.class}, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class OrganismDnaRnaProteinTests {
+
+public class OrganismDnaRnaProteinTests extends AbstractTest {
 
     private static final File srcDnaTextFile = new File(OrganismDnaRnaProteinTests.class.getClassLoader().getResource("TestOrganismTemplateDnaStrand.txt").getFile());
     private static final File srcJsonFile = new File(OrganismDnaRnaProteinTests.class.getClassLoader().getResource("TestOrganism.json").getFile());
