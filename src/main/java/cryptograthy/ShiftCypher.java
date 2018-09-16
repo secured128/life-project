@@ -5,7 +5,7 @@ import com.sun.tools.javac.util.Assert;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ShiftCypher {
+public class ShiftCypher implements Cryptosystem {
 
     static int Z;
 
@@ -73,35 +73,17 @@ public class ShiftCypher {
 
     }
 
-    public static void main(String[] args) {
+    public String encrypt(String input, String key) {
 
-        int key = Integer.valueOf(args[0]);
+        String inputLowcased = input.toLowerCase();
 
-        MODE mode = MODE.valueOf(args[1].toUpperCase());
+        int shiftPositions = Integer.valueOf(key);
 
-        String input = args[2].toLowerCase();
-        String output;
-        switch (mode) {
-            case E:
-                output = encrypt(input, key);
-                break;
-            case D:
-                output = decrypt(input, key);
-                break;
-            default:
-                output = "ERROR : unsupported option " + args[1];
-                break;
-        }
-        System.out.println(output);
-    }
-
-
-    public static String encrypt(String input, int key) {
-        char[] output = new char[input.length()];
+        char[] output = new char[inputLowcased.length()];
         int i = 0;
-        for (char ch : input.toCharArray()) {
+        for (char ch : inputLowcased.toCharArray()) {
             int inputCode = Integer.class.cast(char2code.get(ch));
-            int encryptedValue = (inputCode + key) % Z;
+            int encryptedValue = (inputCode + shiftPositions) % Z;
             char outputChar = Character.class.cast(code2char.get(encryptedValue));
             output[i] = outputChar;
             i++;
@@ -109,23 +91,21 @@ public class ShiftCypher {
         return new String(output).toUpperCase();
     }
 
-    public static String decrypt(String input, int key) {
+    public String decrypt(String input, String key) {
+
+        String inputLowcased = input.toLowerCase();
+
+        int shiftPositions = Integer.valueOf(key);
         char[] output = new char[input.length()];
         int i = 0;
-        for (char ch : input.toCharArray()) {
+        for (char ch : inputLowcased.toCharArray()) {
             int inputCode = Integer.class.cast(char2code.get(ch));
-            int encryptedValue = (inputCode - key + Z) % Z;
+            int encryptedValue = (inputCode - shiftPositions + Z) % Z;
             char outputChar = Character.class.cast(code2char.get(encryptedValue));
             output[i] = outputChar;
             i++;
         }
         return new String(output).toLowerCase();
-    }
-
-    enum MODE {
-
-        E, D;
-
     }
 
 }
