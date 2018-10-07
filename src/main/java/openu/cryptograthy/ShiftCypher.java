@@ -1,4 +1,4 @@
-package cryptograthy;
+package openu.cryptograthy;
 
 import com.sun.tools.javac.util.Assert;
 

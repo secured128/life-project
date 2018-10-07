@@ -1,4 +1,4 @@
-package cryptograthy;
+package openu.cryptograthy;
 
 public enum CRYPTOSYSTEM_TYPE {
 

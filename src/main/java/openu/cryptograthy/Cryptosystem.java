@@ -1,4 +1,4 @@
-package cryptograthy;
+package openu.cryptograthy;
 
 public interface Cryptosystem {
     String encrypt(String input, String key);
