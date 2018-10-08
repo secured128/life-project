@@ -14,7 +14,7 @@ spring:
 web:
   url: http://localhost:8080/health
 heart-bit:
-  rate: 1000
+  rate: 10000
 server:
   port: ${8000:8080}
 ---

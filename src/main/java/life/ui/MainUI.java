@@ -16,6 +16,7 @@ public class MainUI extends UI implements ViewDisplay {
     static final String APP_ROOT = "/";
     private static final String VIEW_SCOPED_VIEW = "View_Scoped View";
     private static final String UI_SCOPED_VIEW = "UI_Scoped View";
+    private static final String VIEW_SCOPED_ENCRYPTION_VIEW = "Encrypt/Decrypt";
     private static final long serialVersionUID = 4967383498113318791L;
     private Panel springViewDisplay;
 
@@ -26,9 +27,11 @@ public class MainUI extends UI implements ViewDisplay {
         setContent(root);
         final CssLayout navigationBar = new CssLayout();
         navigationBar.addStyleName(ValoTheme.LAYOUT_COMPONENT_GROUP);
-        navigationBar.addComponent(createNavigationButton(UI_SCOPED_VIEW, UIScopeView.VIEW_NAME));
-        navigationBar.addComponent(new Label(" "));
-        navigationBar.addComponent(createNavigationButton(VIEW_SCOPED_VIEW, ViewScopeView.VIEW_NAME));
+//        navigationBar.addComponent(createNavigationButton(UI_SCOPED_VIEW, UIScopeView.VIEW_NAME));
+//        navigationBar.addComponent(new Label(" "));
+//        navigationBar.addComponent(createNavigationButton(VIEW_SCOPED_VIEW, ViewScopeView.VIEW_NAME));
+//        navigationBar.addComponent(new Label(" "));
+        navigationBar.addComponent(createNavigationButton(VIEW_SCOPED_ENCRYPTION_VIEW, EncryptDecryptViewScopeView.EN_DE_VIEW_NAME));
         root.addComponent(navigationBar);
         springViewDisplay = new Panel();
         springViewDisplay.setSizeFull();
