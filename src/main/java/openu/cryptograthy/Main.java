@@ -8,25 +8,23 @@ public class Main {
 
         CRYPTOSYSTEM_TYPE type = CRYPTOSYSTEM_TYPE.valueOf(args[0].toUpperCase());
 
-        Cryptosystem cryptosystem = type.getCryptosystem();
+
         MODE mode = MODE.valueOf(args[1].toUpperCase());
 
         String input = args[2];
 
-        String key = null;
+        String key = args[3];
 
-        if (args.length > 3) {
-            key = args[3];
-        }
+        CryptosystemApi cryptosystem = type.getCryptosystem(key);
 
         String output;
 
         switch (mode) {
             case E:
-                output = cryptosystem.encrypt(input, key);
+                output = cryptosystem.encrypt(input);
                 break;
             case D:
-                output = cryptosystem.decrypt(input, key);
+                output = cryptosystem.decrypt(input);
                 break;
             default:
                 output = "ERROR : unsupported option " + args[1];
