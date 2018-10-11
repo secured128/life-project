@@ -15,7 +15,7 @@ public class DefaultView extends VerticalLayout implements View {
 
     @PostConstruct
     void init() {
-        addComponent(new Label("Welcome to Vaadin-Spring Demo!!"));
+        addComponent(new Label("Welcome !!! "));
     }
 
     @Override
