@@ -9,6 +9,10 @@ import openu.cryptograthy.CryptosystemApi;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.annotation.PostConstruct;
+import java.util.ArrayList;
+import java.util.List;
+
+import static openu.cryptograthy.CryptosystemApi.CHARECTERS_NUMBER;
 
 @SpringView(name = EncryptDecryptViewScopeView.EN_DE_VIEW_NAME)
 public class EncryptDecryptViewScopeView extends VerticalLayout implements View {
@@ -33,14 +37,18 @@ public class EncryptDecryptViewScopeView extends VerticalLayout implements View 
     void init() {
         cryptoSystemCombo = new ComboBox("CryptosystemApi");
         shiftCryptosystemKeyLength = new ComboBox("Shift CryptosystemApi Key Length");
-        shiftCryptosystemKeyLength.setItems("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26");
+        List<Integer> integerList = new ArrayList<Integer>();
+        for (int i = 0; i <= CHARECTERS_NUMBER; i++) {
+            integerList.add(i);
+        }
+        shiftCryptosystemKeyLength.setItems(integerList);
         shiftCryptosystemKeyLength.setSelectedItem(3);
         cryptosystem = CRYPTOSYSTEM_TYPE.SHIFT.getCryptosystem("3");
         shiftCryptosystemKeyLength.setEmptySelectionAllowed(false);
 
         substitutionCypherKey = new TextField("Substitution CryptosystemApi Key");
         substitutionCypherKey.setValue(substitutionSypherDefaultKey);
-        substitutionCypherKey.setMaxLength(CryptosystemApi.CHARECTERS_NUMBER);
+        substitutionCypherKey.setMaxLength(CHARECTERS_NUMBER);
         substitutionCypherKey.setRequiredIndicatorVisible(true);
 
         cryptoSystemCombo.setItems(CRYPTOSYSTEM_TYPE.SHIFT.name(), CRYPTOSYSTEM_TYPE.SUBSTITUTION.name());

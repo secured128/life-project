@@ -10,7 +10,7 @@ public abstract class Cypher implements CryptosystemApi {
 
     protected boolean isSupported(char ch) {
         char lch = Character.toLowerCase(ch);
-        if (lch >= 'a' && lch <= 'z') {
+        if (lch >= CryptosystemApi.START_CHAR && lch <= CryptosystemApi.END_CHAR) {
             return true;
         }
         return false;

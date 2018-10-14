@@ -20,7 +20,7 @@ public class SubstitutionCypher extends Cypher {
             char2code = new HashMap<Character, Character>();
             code2char = new HashMap<Character, Character>();
 
-            for (char ch = 'a'; ch <= 'z'; ch++) {
+            for (char ch = CryptosystemApi.START_CHAR; ch <= CryptosystemApi.END_CHAR; ch++) {
                 char newChar = Character.toUpperCase(key.charAt(ch - 'a'));
                 if (char2code.containsValue(newChar)) {
                     throw new IllegalArgumentException("Key must be " + CHARECTERS_NUMBER + " unique characters length");

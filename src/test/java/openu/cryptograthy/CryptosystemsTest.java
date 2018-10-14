@@ -20,9 +20,8 @@ public class CryptosystemsTest {
 
     @Test
     public void SubstitutionCypherTest() {
-
         String defaultKey = "";
-        for (char ch = 'a'; ch <= 'z'; ch++) {
+        for (char ch = CryptosystemApi.START_CHAR; ch <= CryptosystemApi.END_CHAR; ch++) {
             defaultKey = defaultKey + ch;
         }
         CryptosystemApi substitutionCryptosystem = CRYPTOSYSTEM_TYPE.SUBSTITUTION.getCryptosystem(defaultKey);
