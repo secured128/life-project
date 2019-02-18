@@ -14,6 +14,7 @@ import java.util.List;
 
 import static openu.cryptograthy.CryptosystemApi.CHARECTERS_NUMBER;
 
+@SuppressWarnings("unchecked")
 @SpringView(name = EncryptDecryptViewScopeView.EN_DE_VIEW_NAME)
 public class EncryptDecryptViewScopeView extends VerticalLayout implements View {
     public static final String EN_DE_VIEW_NAME = "EncryptDecryptView";
