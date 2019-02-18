@@ -16,6 +16,9 @@ public class DefaultView extends VerticalLayout implements View {
     @PostConstruct
     void init() {
         addComponent(new Label("Welcome !!! "));
+        addComponent(new Label("JDBC_DATABASE_URL : " +System.getenv("JDBC_DATABASE_URL")));
+        addComponent(new Label("DATABASE_URL : " +System.getenv("DATABASE_URL")));
+        addComponent(new Label("SPRING_DATABASE_URL : " +System.getenv("SPRING_DATABASE_URL")));
     }
 
     @Override
