@@ -27,6 +27,7 @@ param1 type  :  INDEX_SETTINGS or TYPE_MAPPING
 param2 path to file : Example - /Users/alexbr/Documents/indexSettingshades6.json , "/Users/alexbr/Documents/typeMappinghades6.json"
 param3 destinationStyx  :  Example - localhost
  */
+@SuppressWarnings("unchecked")
 public class SetIndexSettingsAndTypeMappingUtil {
 
     public static void main(String[] args) throws JsonParseException, IOException {
