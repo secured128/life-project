@@ -1,5 +1,7 @@
 package interview.treetraverse;
 
+import interview.Node;
+
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -86,43 +88,6 @@ public class TreeTraverse {
                 dfsPostorder(node.getRight());
             System.out.print(node.getKey() + " ");
         }
-    }
-
-    public static class Node {
-
-        private int key;
-        private Node left;
-        private Node right;
-
-        public Node(int key) {
-            this.key = key;
-        }
-
-        public int getKey() {
-            return key;
-        }
-
-        public void setKey(int key) {
-            this.key = key;
-        }
-
-        public Node getLeft() {
-            return left;
-        }
-
-        public void setLeft(Node left) {
-            this.left = left;
-        }
-
-        public Node getRight() {
-            return right;
-        }
-
-        public void setRight(Node right) {
-            this.right = right;
-        }
-
-
     }
 
 }
