@@ -1,4 +1,4 @@
-package interview.treetraverse;
+package interview.trees;
 
 import interview.Node;
 

@@ -1,4 +1,4 @@
-package interview.istreebalanced;
+package interview.trees;
 
 
 import interview.Node;
