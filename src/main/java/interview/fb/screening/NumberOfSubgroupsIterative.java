@@ -11,12 +11,19 @@ public class NumberOfSubgroupsIterative {
         int minIndex = 0;
         int maxIndex = array.length - 1;
         while (minIndex <= maxIndex) {
+
+            if ((array[maxIndex] * 2 < limit)) {
+                result = result + Math.pow(2, maxIndex - minIndex + 1);
+                return result;
+            }
+
             if (array[minIndex] + array[maxIndex] < limit) {
-                result = result + (minIndex < maxIndex ? 2 : 0) + (array[maxIndex] * 2 < limit ? 1 : 0) + ((maxIndex - minIndex - 1) > 0 ? Math.pow(2, (maxIndex - minIndex - 1)) : 0)
+                result = result + (minIndex < maxIndex ? 2 : 0) + ((maxIndex - minIndex - 1) > 0 ? Math.pow(2, (maxIndex - minIndex - 1)) : 0)
                 ;
                 minIndex++;
             } else {
                 maxIndex--;
+
             }
         }
 
