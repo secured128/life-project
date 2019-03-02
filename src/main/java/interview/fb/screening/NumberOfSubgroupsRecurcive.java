@@ -3,7 +3,7 @@ package interview.fb.screening;
 import java.util.Arrays;
 import java.util.stream.LongStream;
 
-public class NumberOfSubgroups {
+public class NumberOfSubgroupsRecurcive {
 
     public static long getNumberOfSubgroups(int n) {
         long nFactorial = factorial(n);
