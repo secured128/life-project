@@ -1,7 +1,5 @@
 package interview.trees;
 
-import interview.Node;
-
 import java.util.LinkedList;
 import java.util.Queue;
 

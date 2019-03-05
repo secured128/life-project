@@ -1,11 +1,9 @@
 package interview.trees;
 
 
-import interview.Node;
-
 public class IsTreeBalanced {
 
-//    public static boolean isTreeBalanced(interview.Node.java node) {
+//    public static boolean isTreeBalanced(interview.trees.Node.java node) {
 ////        new BalanceInf()
 //
 //        if()

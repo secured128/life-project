@@ -1,7 +1,5 @@
 package interview.trees;
 
-import interview.Node;
-
 public class IsSymetricTree {
 
     public static boolean isSymetric(Node root) {
